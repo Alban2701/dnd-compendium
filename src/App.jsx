@@ -4,8 +4,11 @@ import viteLogo from '/vite.svg'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Header from './pages/header'
 import Footer from './pages/footer'
-import HomePage from './pages/home'
+import HomePage from './pages/HomePage'
 import Monsters from './pages/Monsters'
+import Classes from './pages/Classes'
+import SingleMonster from './pages/SingleMonster'
+import GameMechanics from './pages/GameMechanics'
 // import './App.css'
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
             <Routes>
               <Route path='/' element={<HomePage />}></Route>
               <Route path='/monsters' element={<Monsters />}></Route>
+              <Route path='/monster/:index' element={<SingleMonster />}></Route>
+              <Route path='/classes' element={<Classes />}></Route>
+              <Route path='/game-mechanics' element={< GameMechanics />}></Route>
             </Routes>
           </div>
           <Footer></Footer>

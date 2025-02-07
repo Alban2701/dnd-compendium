@@ -12,9 +12,18 @@ let getSpells = () => {
     return API.get(`api/spells`)
 }
 
-let getMonster = (apiUrl) => {
+let getMonsterViaUrl = (apiUrl) => {
     return API.get(`${apiUrl}`)
 }
 
+let getMonsterViaIndex = (index) => {
+    return API.get(`api/monsters/${index}`)
+}
 
-export const Endpoints = { getAllMonsters, getAllClasses, getSpells, getMonster };
+let getMonsterImg = (imageUrl) => {
+    let res = API.get(`${imageUrl}`)
+    return res;
+}
+
+
+export const Endpoints = { getAllMonsters, getAllClasses, getSpells, getMonsterViaUrl: getMonsterViaUrl, getMonsterImg, getMonsterViaIndex };
